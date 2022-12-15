@@ -29,9 +29,9 @@ function Footer() {
   const onSubmit = (data) => {
     console.log(data);
   };
-
+ 
   return (
-    <div className="flex justify-center bg-slate-800 text-slate-400 ">
+    <div className="flex justify-center text-ragal-blue font-bold ">
       <form
         className="grid md:grid-cols-2 grid-cols-1 gap-8  border-red-600 p-6"
         onSubmit={handleSubmit(onSubmit)}
