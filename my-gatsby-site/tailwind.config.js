@@ -5,7 +5,20 @@ module.exports = {
     "./src/components/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "ragal-yellow": "#FFD500",
+        "ragal-blue": "#005BBB",
+      },
+    },
+    container: {
+      padding: {
+        DEFAULT: "1rem",
+        sm: "2rem",
+        lg: "4rem",
+        xl: "5rem",
+      },
+    },
   },
   plugins: [],
-}
+};
