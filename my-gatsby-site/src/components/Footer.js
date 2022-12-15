@@ -2,7 +2,6 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import * as styles from "../../src/styles/footer.module.css";
 
 const schema = yup.object().shape({
   firstName: yup.string().required(),
@@ -29,11 +28,15 @@ function Footer() {
   const onSubmit = (data) => {
     console.log(data);
   };
- 
+
   return (
-    <div className="flex justify-center text-ragal-blue font-bold ">
+    <div className="flex flex-col justify-center items-center text-ragal-blue font-bold ">
+      <h1 className="text-ragal-blue text-4xl md:text-6xl font-bold">
+        Contact Us
+      </h1>
+
       <form
-        className="grid md:grid-cols-2 grid-cols-1 gap-8  border-red-600 p-6"
+        className="grid md:grid-cols-2 grid-cols-1 gap-8 mt-10 "
         onSubmit={handleSubmit(onSubmit)}
       >
         <div>
@@ -42,7 +45,7 @@ function Footer() {
           <input
             type="text"
             id="first"
-            className={styles.textfield}
+            className="p-2 border-none border-2 border-ragal-blue rounded-lg"
             {...register("firstName")}
           />
           <p>{errors.firstName?.message}</p>
@@ -53,7 +56,7 @@ function Footer() {
           <input
             type="text"
             id="last"
-            className={styles.textfield}
+            className="p-2 border-none border-2 border-ragal-blue rounded-lg"
             {...register("lastName")}
           />
           <p>{errors.lastName?.message}</p>
@@ -64,7 +67,7 @@ function Footer() {
           <input
             type="email"
             id="email"
-            className={styles.textfield}
+            className="p-2 border-none border-2 border-ragal-blue rounded-lg"
             {...register("email")}
           />
           <p>{errors.email?.message}</p>
@@ -75,7 +78,7 @@ function Footer() {
           <input
             type="tel"
             id="phone"
-            className={styles.textfield}
+            className="p-2 border-none border-2 border-ragal-blue rounded-lg"
             {...register("phone")}
           />
           <p>{errors.phone?.message}</p>
@@ -88,16 +91,19 @@ function Footer() {
           <textarea
             type="textarea"
             id="message"
-            rows="3"
-            cols="40"
-            className={styles.textarea}
+            rows="2"
+            cols="25"
+            className="p-2 border-none border-2 border-ragal-blue rounded-lg "
             {...register("message")}
           />
           <p>{errors.message?.message}</p>
         </div>
         <br />
         <div>
-          <button type="submit" className={styles.submitbtn}>
+          <button
+            type="submit"
+            className="bg-ragal-blue p-3 w-100  rounded-lg text-white font-bold"
+          >
             Submit
           </button>
         </div>

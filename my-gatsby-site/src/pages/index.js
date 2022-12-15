@@ -39,7 +39,7 @@ const IndexPage = () => {
             Hi, we’re Acme. We make tools like Super™ and Track® that are used
             by thousands of teams worldwide.
           </p>
-          <div className="text-ragal-blue mt-40 mb-40 text-2xl md:text-4xl ">
+          <div className="text-ragal-blue mt-40 mb-40 text-2xl md:text-4xl pr-20 md:pr-80">
             We’re serious about creating amazing products, practices, open work,
             accessibility, and inclusivity. And in all that we strive to embed a
             good amount of fun. We’re rooted in the open source community and
