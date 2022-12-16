@@ -102,7 +102,7 @@ function Footer() {
         <div>
           <button
             type="submit"
-            className="bg-ragal-blue p-3 w-100  rounded-lg text-white font-bold"
+            className="bg-ragal-blue p-3 w-100  rounded-lg text-white font-bold hover:bg-blue-500"
           >
             Submit
           </button>
