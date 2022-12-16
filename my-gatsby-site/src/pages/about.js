@@ -2,7 +2,11 @@ import React from "react";
 import Layout from "./../components/Layout";
 
 const About = () => {
-  return <Layout>About page !!!</Layout>;
+  return (
+    <Layout>
+      <p>About page !!!</p>
+    </Layout>
+  );
 };
 
 export const Head = () => <title>About Page</title>;

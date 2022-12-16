@@ -1,5 +1,6 @@
-import * as React from "react";
+import React, { useEffect } from "react";
 import "../../src/styles/global.css";
+import axios from "axios";
 import Layout from "../components/Layout";
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -31,6 +32,17 @@ const data = [
 ];
 
 const IndexPage = () => {
+  useEffect(() => {
+    axios
+      .get(
+        `https://api.github.com/repos/gatsbyjs/gatsby`
+      )
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
   return (
     <Layout>
       <div className="mt-20 mb-20">
